@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="location" label="Location" language="en" table="x_195647_aws_confi_ci">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>location</element>
+            <help/>
+            <hint/>
+            <label>Location</label>
+            <language>en</language>
+            <name>x_195647_aws_confi_ci</name>
+            <plural>Locations</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 14:31:10</sys_created_on>
+            <sys_id>1599f5b0db03234022367dda8c9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Location</sys_name>
+            <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
+            <sys_update_name>sys_documentation_x_195647_aws_confi_ci_location_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 14:31:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

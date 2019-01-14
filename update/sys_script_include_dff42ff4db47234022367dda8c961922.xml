@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_195647_aws_confi.AwsConfigHandler</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>AwsConfigHandler</name>
+        <script><![CDATA[var AwsConfigHandler = Class.create();
+AwsConfigHandler.prototype = {
+    initialize: function() {
+    },
+    process_event: function(message){
+      // SNS Message payload is available as the 'message' object
+      if (message && message.hasOwnProperty("configurationItemDiff")) {
+        var configItemDiff = message.configurationItemDiff;
+        if (configItemDiff && configItemDiff.hasOwnProperty("changeType")) {
+          var configItem = message.configurationItem;
+          var ci = new GlideRecord('x_195647_aws_confi_ci');
+          if (configItemDiff.changeType == "CREATE") {
+            ci.initialize();
+            ci.item_config        = JSON.stringify(configItem);
+            ci.item_status        = configItem["configurationItemStatus"];
+            ci.resource_name      = configItem["resourceName"];
+            ci.resource_type      = configItem["resourceType"];
+            ci.resource_id        = configItem["resourceId"];
+            ci.aws_region         = configItem["awsRegion"];
+            ci.availability_zone  = configItem["availabilityZone"];
+            ci.arn                = configItem["ARN"];
+            ci.name               = configItem["resourceName"];
+            ci.install_status   = 1; // 1 for installed.
+            ci.insert();
+            gs.info("Created new Configuration Item " + ci.sys_id + " ARN " + ci.arn);
+          }
+          else if (configItemDiff.changeType == "DELETE") {
+            ci.addQuery('resource_type', configItem["resourceType"]);
+            ci.addQuery('arn', configItem["ARN"]);
+            ci.query();
+            if (ci.next()) {
+              ci.install_status = 7; // 7 for retired.
+              ci.update();
+              gs.info("Retired Configuration Item " + ci.sys_id + " ARN " + ci.arn);
+            }
+          }
+        }
+      }
+    },
+    type: 'AwsConfigHandler'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-14 22:22:56</sys_created_on>
+        <sys_id>dff42ff4db47234022367dda8c961922</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AwsConfigHandler</sys_name>
+        <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
+        <sys_update_name>sys_script_include_dff42ff4db47234022367dda8c961922</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-14 22:30:11</sys_updated_on>
+    </sys_script_include>
+</record_update>

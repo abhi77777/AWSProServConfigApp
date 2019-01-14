@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="AWS Config CI" max_length="40" name="x_195647_aws_confi_ci" type="collection">
+        <element label="ARN" max_length="1224" name="arn" type="string"/>
+        <element label="Aws Availability Zone" max_length="20" name="availability_zone" type="string"/>
+        <element label="Aws Region" max_length="40" name="aws_region" type="string"/>
+        <element label="Item Config" max_length="4194304" name="item_config" type="string"/>
+        <element label="Item Status" max_length="40" name="item_status" type="string"/>
+        <element label="Resource Id" max_length="255" name="resource_id" type="string"/>
+        <element label="Aws Resource Name" max_length="255" name="resource_name" type="string"/>
+        <element label="Aws Resource Type" max_length="255" name="resource_type" type="string"/>
+    </element>
+</database>

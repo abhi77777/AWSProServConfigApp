@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="item_status" label="Item Status" language="en" table="x_195647_aws_confi_ci">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>item_status</element>
+            <help/>
+            <hint/>
+            <label>Item Status</label>
+            <language>en</language>
+            <name>x_195647_aws_confi_ci</name>
+            <plural>Item Status</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 16:27:04</sys_created_on>
+            <sys_id>83145eb4db43234022367dda8c961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Item Status</sys_name>
+            <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
+            <sys_update_name>sys_documentation_x_195647_aws_confi_ci_item_status_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 16:27:04</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
