@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_195647_aws_confi_ci" version="2" view="default">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>2a233bb4db87234022367dda8c9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>arn</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>aa233bb4db87234022367dda8c9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>resource_type</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>2e233bb4db87234022367dda8c9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>resource_id</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>ae233bb4db87234022367dda8c9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>resource_name</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>22233bb4db87234022367dda8c9619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>aws_region</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>a2233bb4db87234022367dda8c9619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>availability_zone</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>ea233bb4db87234022367dda8c9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>item_status</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>6e233bb4db87234022367dda8c9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>install_status</element>
+            <list_id display_value="x_195647_aws_confi_ci" element="NULL" name="x_195647_aws_confi_ci" parent="NULL" relationship="NULL" sys_domain="global" view="30174876cb811200aa871831794c9cc4">62233bb4db87234022367dda8c9619bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_id>ee233bb4db87234022367dda8c9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_195647_aws_confi_ci</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-14 23:22:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>62233bb4db87234022367dda8c9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_195647_aws_confi_ci</sys_name>
+            <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
+            <sys_update_name>sys_ui_list_x_195647_aws_confi_ci_default</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-14 23:22:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default" name="default">30174876cb811200aa871831794c9cc4</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
