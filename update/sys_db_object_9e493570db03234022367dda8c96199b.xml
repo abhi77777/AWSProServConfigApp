@@ -23,16 +23,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-01-14 14:31:09</sys_created_on>
         <sys_id>9e493570db03234022367dda8c96199b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>AWS Config CI</sys_name>
         <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
         <sys_policy/>
         <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
         <sys_update_name>sys_db_object_9e493570db03234022367dda8c96199b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-01-14 18:51:41</sys_updated_on>
+        <sys_updated_on>2019-01-14 22:43:21</sys_updated_on>
         <update_access>true</update_access>
-        <user_role display_value="x_195647_aws_confi.ci_user" name="x_195647_aws_confi.ci_user">8199f5b0db03234022367dda8c96195d</user_role>
+        <user_role display_value="inventory_admin" name="inventory_admin">2799489ec0a8018b518dae7c4394c6ad</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>
