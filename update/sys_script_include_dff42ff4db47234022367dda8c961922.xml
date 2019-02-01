@@ -9,40 +9,67 @@
         <script><![CDATA[var AwsConfigHandler = Class.create();
 AwsConfigHandler.prototype = {
     initialize: function() {
+      this.cmdb_ci = new GlideRecord('x_195647_aws_confi_ci');
     },
     process_event: function(message){
-      // SNS Message payload is available as the 'message' object
+      // SNS Message payload is available in the 'message' object
       if (message && message.hasOwnProperty("configurationItemDiff")) {
         var configItemDiff = message.configurationItemDiff;
         if (configItemDiff && configItemDiff.hasOwnProperty("changeType")) {
-          var configItem = message.configurationItem;
-          var ci = new GlideRecord('x_195647_aws_confi_ci');
-          if (configItemDiff.changeType == "CREATE") {
-            ci.initialize();
-            ci.item_config        = JSON.stringify(configItem);
-            ci.item_status        = configItem["configurationItemStatus"];
-            ci.resource_name      = configItem["resourceName"];
-            ci.resource_type      = configItem["resourceType"];
-            ci.resource_id        = configItem["resourceId"];
-            ci.aws_region         = configItem["awsRegion"];
-            ci.availability_zone  = configItem["availabilityZone"];
-            ci.arn                = configItem["ARN"];
-            ci.name               = configItem["resourceName"];
-            ci.install_status   = 1; // 1 for installed.
-            ci.insert();
-            gs.info("Created new Configuration Item " + ci.sys_id + " ARN " + ci.arn);
+          try {
+            var cmdbCi = this[configItemDiff.changeType.toLowerCase() + "_item"](message.configurationItem);
+            return cmdbCi;
           }
-          else if (configItemDiff.changeType == "DELETE") {
-            ci.addQuery('resource_type', configItem["resourceType"]);
-            ci.addQuery('arn', configItem["ARN"]);
-            ci.query();
-            if (ci.next()) {
-              ci.install_status = 7; // 7 for retired.
-              ci.update();
-              gs.info("Retired Configuration Item " + ci.sys_id + " ARN " + ci.arn);
-            }
+          catch(err) {
+            gs.error("AWS Config item changeType not supported: " + configItemDiff.changeType + " error " + err.message);
           }
         }
+      }
+    },
+    create_item: function(configItem){
+      this.cmdb_ci.addQuery('arn', configItem["ARN"]);
+      this.cmdb_ci.query();
+      if (!this.cmdb_ci.next()) {
+        this.cmdb_ci.initialize();
+        this.cmdb_ci.item_config        = JSON.stringify(configItem);
+        this.cmdb_ci.item_status        = configItem["configurationItemStatus"];
+        this.cmdb_ci.resource_name      = configItem["resourceName"];
+        this.cmdb_ci.resource_type      = configItem["resourceType"];
+        this.cmdb_ci.resource_id        = configItem["resourceId"];
+        this.cmdb_ci.aws_region         = configItem["awsRegion"];
+        this.cmdb_ci.availability_zone  = configItem["availabilityZone"];
+        this.cmdb_ci.arn                = configItem["ARN"];
+        this.cmdb_ci.aws_account_id     = configItem["awsAccountId"];
+        this.cmdb_ci.name               = configItem["resourceName"];
+        this.cmdb_ci.install_status     = 1; // 1 for installed.
+        this.cmdb_ci.insert();
+        gs.info("Created new AWS Configuration Item " + this.cmdb_ci.sys_id + " ARN " + this.cmdb_ci.arn);
+      }
+      else {
+        this.update_item(configItem);
+      }
+    },
+    update_item: function(configItem){
+      this.cmdb_ci.addQuery('resource_type', configItem["resourceType"]);
+      this.cmdb_ci.addQuery('arn', configItem["ARN"]);
+      this.cmdb_ci.query();
+      if (this.cmdb_ci.next()) {
+        this.cmdb_ci.item_config = JSON.stringify(configItem);
+        this.cmdb_ci.item_status = configItem["configurationItemStatus"];
+        this.cmdb_ci.update();
+        gs.info("Updated AWS Configuration Item " + this.cmdb_ci.sys_id + " ARN " + this.cmdb_ci.arn);
+      } else {
+        this.create_item(configItem);
+      }
+    },
+    delete_item: function(configItem){
+      this.cmdb_ci.addQuery('resource_type', configItem["resourceType"]);
+      this.cmdb_ci.addQuery('arn', configItem["ARN"]);
+      this.cmdb_ci.query();
+      if (this.cmdb_ci.next()) {
+        this.cmdb_ci.install_status = 7; // 7 for retired.
+        this.cmdb_ci.update();
+        gs.info("Retired AWS Configuration Item " + this.cmdb_ci.sys_id + " ARN " + this.cmdb_ci.arn);
       }
     },
     type: 'AwsConfigHandler'
@@ -51,13 +78,13 @@ AwsConfigHandler.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-01-14 22:22:56</sys_created_on>
         <sys_id>dff42ff4db47234022367dda8c961922</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>AwsConfigHandler</sys_name>
         <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
         <sys_update_name>sys_script_include_dff42ff4db47234022367dda8c961922</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-01-14 22:30:11</sys_updated_on>
+        <sys_updated_on>2019-02-01 02:07:52</sys_updated_on>
     </sys_script_include>
 </record_update>
