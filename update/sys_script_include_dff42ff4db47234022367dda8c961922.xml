@@ -10,18 +10,35 @@
 AwsConfigHandler.prototype = {
     initialize: function() {
       this.cmdb_ci = new GlideRecord('x_195647_aws_confi_ci');
+      this.resource_types = String(gs.getProperty(gs.getCurrentScopeName()+".Config.Resources")).split('\n');
     },
+    contains: function(arr, obj) {
+        var i = arr.length;
+        while (i--) {
+            if (arr[i].match(obj)) {
+                return true;
+            }
+        }
+        return false;
+    },
+
     process_event: function(message){
       // SNS Message payload is available in the 'message' object
       if (message && message.hasOwnProperty("configurationItemDiff")) {
         var configItemDiff = message.configurationItemDiff;
         if (configItemDiff && configItemDiff.hasOwnProperty("changeType")) {
-          try {
-            var cmdbCi = this[configItemDiff.changeType.toLowerCase() + "_item"](message.configurationItem);
-            return cmdbCi;
+          //Filter resource type with whitelist
+          if (this.contains(this.resource_types, message.configurationItem["resourceType"])) {
+            try {
+              var cmdbCi = this[configItemDiff.changeType.toLowerCase() + "_item"](message.configurationItem);
+              return cmdbCi;
+            }
+            catch(err) {
+              gs.error("AWS Config item changeType not supported: " + configItemDiff.changeType + " error " + err.message);
+            }
           }
-          catch(err) {
-            gs.error("AWS Config item changeType not supported: " + configItemDiff.changeType + " error " + err.message);
+          else {
+            gs.info("Ignoring Resource Type: " + message.configurationItem["resourceType"] )
           }
         }
       }
@@ -78,13 +95,13 @@ AwsConfigHandler.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-01-14 22:22:56</sys_created_on>
         <sys_id>dff42ff4db47234022367dda8c961922</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>AwsConfigHandler</sys_name>
         <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
         <sys_update_name>sys_script_include_dff42ff4db47234022367dda8c961922</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-01 02:07:52</sys_updated_on>
+        <sys_updated_on>2019-02-01 14:23:38</sys_updated_on>
     </sys_script_include>
 </record_update>

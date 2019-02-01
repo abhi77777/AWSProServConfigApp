@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Supported Resporce Type whitelist</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_195647_aws_confi.Config.Resources</name>
+        <read_roles/>
+        <suffix>Config.Resources</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-01 13:44:20</sys_created_on>
+        <sys_id>c23b1a62379f2300cf19ded993990e7d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>x_195647_aws_confi.Config.Resources</sys_name>
+        <sys_package display_value="AWS Config" source="x_195647_aws_confi">85b73df8dbcfef0022367dda8c961981</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AWS Config">85b73df8dbcfef0022367dda8c961981</sys_scope>
+        <sys_update_name>sys_properties_c23b1a62379f2300cf19ded993990e7d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-01 14:27:26</sys_updated_on>
+        <type>string</type>
+        <value>AWS::EC2::NetworkInterface&#13;
+AWS::EC2::CustomerGateway&#13;
+AWS::EC2::EIP&#13;
+AWS::EC2::Host&#13;
+AWS::EC2::Instance&#13;
+AWS::EC2::InternetGateway&#13;
+AWS::EC2::NetworkAcl&#13;
+AWS::EC2::RouteTable&#13;
+AWS::EC2::SecurityGroup&#13;
+AWS::EC2::Subnet&#13;
+AWS::CloudTrail::Trail&#13;
+AWS::EC2::Volume&#13;
+AWS::EC2::VPC&#13;
+AWS::EC2::VPNConnection&#13;
+AWS::EC2::VPNGateway&#13;
+AWS::IAM::Group&#13;
+AWS::IAM::Policy&#13;
+AWS::IAM::Role&#13;
+AWS::IAM::User&#13;
+AWS::ACM::Certificate&#13;
+AWS::RDS::DBInstance&#13;
+AWS::RDS::DBSubnetGroup&#13;
+AWS::RDS::DBSecurityGroup&#13;
+AWS::RDS::DBSnapshot&#13;
+AWS::RDS::EventSubscription&#13;
+AWS::ElasticLoadBalancingV2::LoadBalancer&#13;
+AWS::S3::Bucket&#13;
+AWS::SSM::ManagedInstanceInventory&#13;
+AWS::Redshift::Cluster&#13;
+AWS::Redshift::ClusterSnapshot&#13;
+AWS::Redshift::ClusterParameterGroup&#13;
+AWS::Redshift::ClusterSecurityGroup&#13;
+AWS::Redshift::ClusterSubnetGroup&#13;
+AWS::Redshift::EventSubscription&#13;
+AWS::CloudWatch::Alarm&#13;
+AWS::CloudFormation::Stack&#13;
+AWS::DynamoDB::Table&#13;
+AWS::AutoScaling::AutoScalingGroup&#13;
+AWS::AutoScaling::LaunchConfiguration&#13;
+AWS::AutoScaling::ScalingPolicy&#13;
+AWS::AutoScaling::ScheduledAction&#13;
+AWS::CodeBuild::Project&#13;
+AWS::WAF::RateBasedRule&#13;
+AWS::WAF::Rule&#13;
+AWS::WAF::WebACL&#13;
+AWS::WAFRegional::RateBasedRule&#13;
+AWS::WAFRegional::Rule&#13;
+AWS::WAFRegional::WebACL&#13;
+AWS::CloudFront::Distribution&#13;
+AWS::CloudFront::StreamingDistribution&#13;
+AWS::WAF::RuleGroup&#13;
+AWS::WAFRegional::RuleGroup&#13;
+AWS::Lambda::Function&#13;
+AWS::ElasticBeanstalk::Application&#13;
+AWS::ElasticBeanstalk::ApplicationVersion&#13;
+AWS::ElasticBeanstalk::Environment&#13;
+AWS::ElasticLoadBalancing::LoadBalancer&#13;
+AWS::XRay::EncryptionConfig&#13;
+AWS::SSM::AssociationCompliance&#13;
+AWS::SSM::PatchCompliance&#13;
+AWS::Shield::Protection&#13;
+AWS::ShieldRegional::Protection&#13;
+AWS::Config::ResourceCompliance&#13;
+AWS::CodePipeline::Pipeline</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=c23b1a62379f2300cf19ded993990e7d"/>
+</record_update>
